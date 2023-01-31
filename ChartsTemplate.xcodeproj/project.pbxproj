@@ -9,11 +9,10 @@
 /* Begin PBXBuildFile section */
 		348942163CF6C3F102DFD386 /* Pods_ChartsTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFA1716F38E86F1D202B7E61 /* Pods_ChartsTemplate.framework */; };
 		CD44C0BE29889BAF00A9616C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD44C0BD29889BAF00A9616C /* AppDelegate.swift */; };
-		CD44C0C029889BAF00A9616C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD44C0BF29889BAF00A9616C /* SceneDelegate.swift */; };
-		CD44C0C229889BAF00A9616C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD44C0C129889BAF00A9616C /* ViewController.swift */; };
-		CD44C0C529889BAF00A9616C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD44C0C329889BAF00A9616C /* Main.storyboard */; };
+		CD44C0C229889BAF00A9616C /* DemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD44C0C129889BAF00A9616C /* DemoListViewController.swift */; };
 		CD44C0C729889BB000A9616C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD44C0C629889BB000A9616C /* Assets.xcassets */; };
 		CD44C0CA29889BB000A9616C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD44C0C829889BB000A9616C /* LaunchScreen.storyboard */; };
+		CD85F2E12989850D00CE9EA4 /* StackedBarChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD85F2E02989850D00CE9EA4 /* StackedBarChartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,12 +21,11 @@
 		AFA1716F38E86F1D202B7E61 /* Pods_ChartsTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChartsTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD44C0BA29889BAF00A9616C /* ChartsTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChartsTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD44C0BD29889BAF00A9616C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CD44C0BF29889BAF00A9616C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CD44C0C129889BAF00A9616C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CD44C0C429889BAF00A9616C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CD44C0C129889BAF00A9616C /* DemoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoListViewController.swift; sourceTree = "<group>"; };
 		CD44C0C629889BB000A9616C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD44C0C929889BB000A9616C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD44C0CB29889BB000A9616C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD85F2E02989850D00CE9EA4 /* StackedBarChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackedBarChartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +54,6 @@
 				65A02A059012597FCF48C118 /* Pods-ChartsTemplate.debug.xcconfig */,
 				7311B3CC0B5EC9446DFE7745 /* Pods-ChartsTemplate.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -82,12 +79,11 @@
 			isa = PBXGroup;
 			children = (
 				CD44C0BD29889BAF00A9616C /* AppDelegate.swift */,
-				CD44C0BF29889BAF00A9616C /* SceneDelegate.swift */,
-				CD44C0C129889BAF00A9616C /* ViewController.swift */,
-				CD44C0C329889BAF00A9616C /* Main.storyboard */,
+				CD44C0C129889BAF00A9616C /* DemoListViewController.swift */,
 				CD44C0C629889BB000A9616C /* Assets.xcassets */,
 				CD44C0C829889BB000A9616C /* LaunchScreen.storyboard */,
 				CD44C0CB29889BB000A9616C /* Info.plist */,
+				CD85F2E02989850D00CE9EA4 /* StackedBarChartViewController.swift */,
 			);
 			path = ChartsTemplate;
 			sourceTree = "<group>";
@@ -154,7 +150,6 @@
 			files = (
 				CD44C0CA29889BB000A9616C /* LaunchScreen.storyboard in Resources */,
 				CD44C0C729889BB000A9616C /* Assets.xcassets in Resources */,
-				CD44C0C529889BAF00A9616C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,23 +202,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD44C0C229889BAF00A9616C /* ViewController.swift in Sources */,
+				CD44C0C229889BAF00A9616C /* DemoListViewController.swift in Sources */,
 				CD44C0BE29889BAF00A9616C /* AppDelegate.swift in Sources */,
-				CD44C0C029889BAF00A9616C /* SceneDelegate.swift in Sources */,
+				CD85F2E12989850D00CE9EA4 /* StackedBarChartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CD44C0C329889BAF00A9616C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CD44C0C429889BAF00A9616C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CD44C0C829889BB000A9616C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -362,9 +349,9 @@
 				INFOPLIST_FILE = ChartsTemplate/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -391,9 +378,9 @@
 				INFOPLIST_FILE = ChartsTemplate/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
