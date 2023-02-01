@@ -44,10 +44,11 @@ private extension StackedBarChartViewController {
     
     func createChartView() -> BarChartView {
         let chartView = BarChartView(frame: CGRect(x: 0, y: 100, width: Constants.charWidth, height: Constants.chartHeight))
-        
+        chartView.chartDescription.enabled = false
         chartView.leftAxis.axisMinimum = 0
         chartView.leftAxis.enabled = false
         chartView.rightAxis.enabled = false
+        chartView.legend.enabled = false
         
         
         let xAxis = chartView.xAxis
@@ -56,27 +57,25 @@ private extension StackedBarChartViewController {
         xAxis.labelCount = 3
         xAxis.valueFormatter = MonthAxisValueFormatter()
         xAxis.labelFont = .boldSystemFont(ofSize: 16)
+
+
         
-        let l = chartView.legend
-        l.horizontalAlignment = .right
-        l.verticalAlignment = .bottom
-        
-        chartView.delegate = self
         return chartView
     }
     
     func setChartData() {
-        let values: [[Double]] = [[4, 10, 20, 30], [5, 20, 40, 30], [6, 5, 10, 20]]
+        let values: [[Double]] = [[4, 0, 1, 0], [5, 20, 40, 30], [6, 5, 10, 200]]
         let yVals = values.map { (item) -> BarChartDataEntry in
             return BarChartDataEntry(x: item[0], yValues: [item[1], item[2], item[3]])
         }
         let set = BarChartDataSet(entries: yVals)
-        set.colors = [.orange, .green, .yellow]
+        set.colors = [.orange, .green, .red]
         set.drawIconsEnabled = false
-        
-
+        set.valueFont = .boldSystemFont(ofSize: 14)
         
         let data = BarChartData(dataSet: set)
+        data.setValueFormatter(StackedBarChartValueFormatter())
+        
         chartView.fitBars = true
         chartView.data = data
         
@@ -84,13 +83,33 @@ private extension StackedBarChartViewController {
     
 }
 
-// MARK: - ChartViewDelegate
+// MARK: - StackedBarChartValueFormatter
 
-extension StackedBarChartViewController: ChartViewDelegate {
+class StackedBarChartValueFormatter: ValueFormatter {
     
+    func stringForValue(_ value: Double, entry: Charts.ChartDataEntry, dataSetIndex: Int, viewPortHandler: Charts.ViewPortHandler?) -> String {
+        
+        guard let barChartDataEntry = entry as? BarChartDataEntry else {
+            return ""
+        }
+        
+        var nonZeroYValues : [Double] = []
+        barChartDataEntry.yValues?.forEach { yValue in
+            if yValue != 0.0 {
+                nonZeroYValues.append(yValue)
+            }
+        }
+        
+        if nonZeroYValues.last == value {
+            return String(Int(entry.y))
+        }
+        else {
+            return ""
+        }
+    }
 }
-
-
+ 
+// MARK: - MonthAxisValueFormatter
 class MonthAxisValueFormatter: AxisValueFormatter {
     
     func stringForValue(_ value: Double, axis: Charts.AxisBase?) -> String {
@@ -102,6 +121,4 @@ class MonthAxisValueFormatter: AxisValueFormatter {
         let month = dateFormatter.monthSymbols[Int(value-1)]
         return month
     }
-    
-    
 }
