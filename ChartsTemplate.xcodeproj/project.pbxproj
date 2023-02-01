@@ -13,6 +13,7 @@
 		CD44C0C729889BB000A9616C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD44C0C629889BB000A9616C /* Assets.xcassets */; };
 		CD44C0CA29889BB000A9616C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD44C0C829889BB000A9616C /* LaunchScreen.storyboard */; };
 		CD85F2E12989850D00CE9EA4 /* StackedBarChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD85F2E02989850D00CE9EA4 /* StackedBarChartViewController.swift */; };
+		CDAB8ED82989EBB80066DD71 /* HorizontalBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB8ED72989EBB80066DD71 /* HorizontalBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		CD44C0C929889BB000A9616C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD44C0CB29889BB000A9616C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD85F2E02989850D00CE9EA4 /* StackedBarChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackedBarChartViewController.swift; sourceTree = "<group>"; };
+		CDAB8ED72989EBB80066DD71 /* HorizontalBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				CD44C0C829889BB000A9616C /* LaunchScreen.storyboard */,
 				CD44C0CB29889BB000A9616C /* Info.plist */,
 				CD85F2E02989850D00CE9EA4 /* StackedBarChartViewController.swift */,
+				CDAB8ED72989EBB80066DD71 /* HorizontalBarViewController.swift */,
 			);
 			path = ChartsTemplate;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 			files = (
 				CD44C0C229889BAF00A9616C /* DemoListViewController.swift in Sources */,
 				CD44C0BE29889BAF00A9616C /* AppDelegate.swift in Sources */,
+				CDAB8ED82989EBB80066DD71 /* HorizontalBarViewController.swift in Sources */,
 				CD85F2E12989850D00CE9EA4 /* StackedBarChartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

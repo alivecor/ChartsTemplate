@@ -16,6 +16,7 @@ class DemoListViewController: UITableViewController {
     
     private var itemDefs = [
         ItemDef(title: "Stacked Bar Chart", class: StackedBarChartViewController.self),
+        ItemDef(title: "Horizontal Bar Chart", class: HorizontalBarViewController.self)
         
     ]
 

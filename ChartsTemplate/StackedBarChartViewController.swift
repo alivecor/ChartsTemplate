@@ -35,10 +35,7 @@ private extension StackedBarChartViewController {
     
     func configureSubviews() {
         view.backgroundColor = .white
-        
         chartView = createChartView()
-
-        
         view.addSubview(chartView)
     }
     
@@ -50,7 +47,6 @@ private extension StackedBarChartViewController {
         chartView.rightAxis.enabled = false
         chartView.legend.enabled = false
         
-        
         let xAxis = chartView.xAxis
         xAxis.drawGridLinesEnabled = false
         xAxis.labelPosition = .bottom
@@ -58,8 +54,6 @@ private extension StackedBarChartViewController {
         xAxis.valueFormatter = MonthAxisValueFormatter()
         xAxis.labelFont = .boldSystemFont(ofSize: 16)
 
-
-        
         return chartView
     }
     
@@ -78,7 +72,6 @@ private extension StackedBarChartViewController {
         
         chartView.fitBars = true
         chartView.data = data
-        
     }
     
 }
